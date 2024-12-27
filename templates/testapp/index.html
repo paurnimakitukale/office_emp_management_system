@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div align="center">
+        <h1>Employee System</h1>
+        {%if all_data%}
+        <table border="5">
+            <thead>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Salary</th>
+                <th>Age</th>
+            </thead>
+            {%for all in all_data%}
+            <tr>
+                <td>{{all.name}}</td>
+                <td>{{all.address}}</td>
+                <td>{{all.salary}}</td>
+                <td>{{all.age}}</td>
+            </tr>
+            {%endfor%}
+         {%else%} 
+         <p>No records found!!!!</p>  
+        </table>
+        {%endif%}
+    </div>
+</body>
+</html>
