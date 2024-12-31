@@ -73,6 +73,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'modelproject5.wsgi.application'
 
 
+LOGIN_REDIRECT_URL='/home'
+
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
